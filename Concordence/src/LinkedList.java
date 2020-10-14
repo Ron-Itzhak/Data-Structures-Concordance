@@ -1,24 +1,26 @@
 public class LinkedList { 
   
     Node head; // head of list 
-  
-    // Linked list Node. 
+    ///
+        // Linked list Node. 
     // This inner class is made static 
     // so that main() can access it 
     static class Node { 
   
-        int data; 
+        char data; 
         Node next; 
-  
+        BinarySearchTree tree;
+        
         // Constructor 
-        Node(int d) 
-        { 
+        Node(char d){
+        	
+        	tree= new BinarySearchTree();
             data = d; 
             next = null; 
         } 
     }
     // Method to insert a new node 
-    public static LinkedList insert(LinkedList list, int data) 
+    public static LinkedList insert(LinkedList list, char data) 
     { 
         // Create a new node with given data 
         Node new_node = new Node(data); 
@@ -73,14 +75,14 @@ public class LinkedList {
         // 
   
         // Insert the values 
-        list = insert(list, 1); 
-        list = insert(list, 2); 
-        list = insert(list, 3); 
-        list = insert(list, 4); 
-        list = insert(list, 5); 
-        list = insert(list, 6); 
-        list = insert(list, 7); 
-        list = insert(list, 8); 
+        list = insert(list, 'a'); 
+        list = insert(list, 'b'); 
+        list = insert(list, 'c'); 
+        list = insert(list, (char)65); 
+        list = insert(list, (char)5); 
+        list = insert(list,(char) 6); 
+        list = insert(list, (char)7); 
+        list = insert(list,(char) 8); 
   
         // Print the LinkedList 
         printList(list); 

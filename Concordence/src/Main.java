@@ -7,6 +7,25 @@ public class Main {
 
 	public static void main(String[] args) {
 		int row = 0;
+		
+		//linked lis all letters
+        LinkedList list = new LinkedList(); 
+        for (int i=0;i<26;i++) {
+        	list.insert(list, (char)(i+97));
+        }
+    	list.printList(list);
+    	System.out.println();
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		try {
 			File myObj = new File("Text.txt");
 			Scanner myReader = new Scanner(myObj);
@@ -14,12 +33,13 @@ public class Main {
 				String data = myReader.nextLine();
 				String line = data.toLowerCase();
 				String[] arr = line.split("[\\, \\-\\.\\'\\?\\,\\_\\@]+");
-				ArrayList<Node> nodeList = new ArrayList<Node>( );
-				nodeList.add(new Node(arr[0], row,0 ));
+				ArrayList<Word> wordsList = new ArrayList<Word>( );
+				wordsList.add(new Word(arr[0], row,0 ));
 				for (int i = 1; i < arr.length; i++) {
 					//System.out.print(arr[i]+" ");
-					nodeList.add(new Node(arr[i], row, i));
-					System.out.println(nodeList.get(i).toString());
+					wordsList.add(new Word(arr[i], row, i));
+					//System.out.println(wordsList.get(i).toString()); print all words
+					
 				}
 				row++;
 				//System.out.println();
@@ -30,16 +50,10 @@ public class Main {
 			System.out.println("An error occurred.");
 			e.printStackTrace();
 		}
-///////// Not in use
-//	if(b.contains(","))
-//		b= b.substring(0, b.length()-1);
+		
+		BinarySearchTree tree = new BinarySearchTree();
+		
 
-//	System.out.println(b);
-		// Scanner s = new Scanner (System.in);
-		// String b=s.next();
-		//String[] arr = data.split("\\W");
-		
-		
 		
 	
 		

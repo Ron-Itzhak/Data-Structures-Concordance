@@ -46,6 +46,29 @@ public class LinkedList {
         // Return the list by head 
         return list; 
     } 
+    
+    
+    
+    public void wordInsert(LinkedList list,Word word) {
+        Node currNode = list.head; 
+
+        while(this.head.data!=word.data.charAt(0)) {
+    		currNode = head.next;
+
+    	}
+        currNode.tree.insert(word);
+    		
+        
+    	
+    	
+    	
+    	
+    }
+
+    
+    
+    
+    
   
     // Method to print the LinkedList. 
     public static void printList(LinkedList list) 
@@ -58,6 +81,8 @@ public class LinkedList {
         while (currNode != null) { 
             // Print the data at current node 
             System.out.print(currNode.data + " "); 
+             currNode.tree.inOrderPrint(currNode.tree.getRoot());; 
+
    
             // Go to next node 
             currNode = currNode.next; 

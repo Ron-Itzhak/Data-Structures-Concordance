@@ -50,6 +50,7 @@ public class LinkedList {
     
     
     public void wordInsert(Word word) {
+    	//fix this
         Node currNode = this.head; 
 
         while(this.head.data!=word.data.charAt(0)) {

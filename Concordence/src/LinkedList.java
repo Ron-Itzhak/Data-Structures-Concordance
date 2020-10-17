@@ -49,20 +49,14 @@ public class LinkedList {
     
     
     
-    public void wordInsert(LinkedList list,Word word) {
-        Node currNode = list.head; 
+    public void wordInsert(Word word) {
+        Node currNode = this.head; 
 
         while(this.head.data!=word.data.charAt(0)) {
     		currNode = head.next;
 
     	}
         currNode.tree.insert(word);
-    		
-        
-    	
-    	
-    	
-    	
     }
 
     
@@ -71,16 +65,16 @@ public class LinkedList {
     
   
     // Method to print the LinkedList. 
-    public static void printList(LinkedList list) 
+    public void printList() 
     { 
-        Node currNode = list.head; 
+        Node currNode = this.head; 
    
-        System.out.print("LinkedList: "); 
+        System.out.println("Concordance:"); 
    
         // Traverse through the LinkedList 
         while (currNode != null) { 
             // Print the data at current node 
-            System.out.print(currNode.data + " "); 
+           // System.out.print(currNode.data + " "); 
              currNode.tree.inOrderPrint(currNode.tree.getRoot());; 
 
    
@@ -110,8 +104,7 @@ public class LinkedList {
         list = insert(list,(char) 8); 
   
         // Print the LinkedList 
-        printList(list); 
+        list.printList(); 
     } 
-
     
     }

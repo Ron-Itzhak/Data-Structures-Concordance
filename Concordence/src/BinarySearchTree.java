@@ -44,19 +44,19 @@ public class BinarySearchTree {
 	}
 
 	/* A recursive function to insert a new key in BST */
-	TreeNode insertRec(TreeNode root, Word data) {
+	TreeNode insertRec(TreeNode root, Word word) {
 
 		/* If the tree is empty, return a new node */
 		if (root == null) {
-			root = new TreeNode(data);
+			root = new TreeNode(word);
 			return root;
 		}
 
 		/* Otherwise, recur down the tree */
-		if (root.data.data.compareTo(data.data) == 1)
-			root.left = insertRec(root.left, data);
-		else if (root.data.data.compareTo(data.data) == -1 || root.data.data.compareTo(data.data) == 0)
-			root.right = insertRec(root.right, data);
+		if (root.data.data.compareTo(word.data) >= 1)
+			root.left = insertRec(root.left, word);
+		else if (root.data.data.compareTo(word.data) <=0)
+			root.right = insertRec(root.right, word);
 
 		/* return the (unchanged) node pointer */
 		return root;
@@ -67,11 +67,22 @@ public class BinarySearchTree {
 	public static void main(String[] args) {
 		BinarySearchTree tree = new BinarySearchTree();
 		//tree.insert("b");
-		//tree.insert("a");
-		//tree.insert("c");
-		//tree.insert("a");
-		//tree.insert("a");
-		System.out.println(tree.root);
+
+		
+		Word test = new Word("atest",0,0);
+		Word test1 = new Word("atest",0,1);
+		tree.insert(test);
+		tree.insert(test1);
+
+		
+		///////////////////////////////
+		///not entered+not printed yet
+		Word test2 = new Word("abctest",0,2);
+		Word test3 = new Word("abtest",0,3);
+		tree.insert(test2);
+		tree.insert(test3);
+
+		//System.out.println(tree.root);
 
 		tree.inOrderPrint(tree.root);
 

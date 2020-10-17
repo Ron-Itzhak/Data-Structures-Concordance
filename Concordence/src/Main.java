@@ -15,22 +15,23 @@ public class Main {
         for (int i=0;i<26;i++) {
         	list.insert(list, (char)(i+97));
         }
-    	list.printList(list);
-    	System.out.println();
-
-		
-		Word test = new Word("atest",0,0);
-		Word test2 = new Word("abctest",0,0);
-		Word test3 = new Word("abtest",0,0);
-
-		list.wordInsert(list, test);
-		list.wordInsert(list, test);
-		list.wordInsert(list, test2);
-		list.wordInsert(list, test3);
-
-    	list.printList(list);
-
-		
+//    	list.printList();
+//    	System.out.println();
+//
+//		
+//		Word test = new Word("atest",0,0);
+//		Word test1 = new Word("atest",0,1);
+//		///not entered+not printed yet
+//		Word test2 = new Word("abctest",0,2);
+//		Word test3 = new Word("abtest",0,3);
+//
+//		list.wordInsert(test);
+//		list.wordInsert(test1);
+//		list.wordInsert(test2);
+//		list.wordInsert(test3);
+//
+//
+//		
 		
 		
 		
@@ -40,6 +41,11 @@ public class Main {
 		try {
 			File myObj = new File("Text.txt");
 			Scanner myReader = new Scanner(myObj);
+			
+			Scanner myReader2 = new Scanner(System.in);
+System.out.println("aaa");
+			
+			
 			while (myReader.hasNextLine()) {
 				String data = myReader.nextLine();
 				String line = data.toLowerCase();
@@ -51,9 +57,10 @@ public class Main {
 					word=new Word(arr[i], row, i);
 					//wordsList.add(word);
 					//System.out.println(wordsList.get(i).toString()); print all words
-					if(word.data.charAt(0)==list.head.data)
-						list.head.tree.insert(word);
-					
+//					if(word.data.charAt(0)==list.head.data)
+//						list.head.tree.insert(word);
+					list.wordInsert(word);
+					System.out.println(word);
 				}
 				row++;
 				//System.out.println();
@@ -65,10 +72,10 @@ public class Main {
 			e.printStackTrace();
 		}
 		
-		BinarySearchTree tree = new BinarySearchTree();
 		
 
-		
+    	list.printList();
+
 	
 		
 

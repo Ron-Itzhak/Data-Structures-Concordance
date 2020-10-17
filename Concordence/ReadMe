@@ -1,3 +1,12 @@
 Instructions
-1.Insert a well Written text.
-2.paste the wanted text in "Text.txt"
+1.Insert a well Written text without empty lines.
+2.paste your wanted text in "Text.txt" in the project folder.
+3.
+
+complexity:
+n=number of words in text.
+the trees are binary search trees and they are not balanced
+first to search the right tree between the 26 trees in list and then make operations
+such as :
+insert:o(n)
+search:o(n) worst case

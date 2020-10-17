@@ -3,15 +3,19 @@ public class BinarySearchTree {
 	
 	private TreeNode root;
 	
-	//private char letter;
+	private char letter;
+
+	public char getLetter() {
+		return letter;
+	}
 
 	public TreeNode getRoot() {
 		return root;
 	}
 
-	public BinarySearchTree() {
+	public BinarySearchTree(char letter) {
 		this.root = null;
-		//this.letter = letter;
+		this.letter = letter;
 
 	}
 
@@ -43,8 +47,8 @@ public class BinarySearchTree {
 	}
 
 	// This method mainly calls insertRec()
-	void insert(Word key) {
-		root = insertRec(root, key);
+	void insert(Word word) {
+		root = insertRec(root, word);
 	}
 
 	/* A recursive function to insert a new key in BST */
@@ -69,20 +73,20 @@ public class BinarySearchTree {
 
 
 	public static void main(String[] args) {
-		BinarySearchTree tree = new BinarySearchTree();
+		BinarySearchTree tree = new BinarySearchTree('a');
 		//tree.insert("b");
 
 		
-		Word test = new Word("atest",0,0);
-		Word test1 = new Word("atest",0,1);
+		Word test = new Word("atest",0);
+		Word test1 = new Word("atest",1);
 		tree.insert(test);
 		tree.insert(test1);
 
 		
 		///////////////////////////////
 		///not entered+not printed yet
-		Word test2 = new Word("abctest",0,2);
-		Word test3 = new Word("abtest",0,3);
+		Word test2 = new Word("abctest",2);
+		Word test3 = new Word("abtest",3);
 		tree.insert(test2);
 		tree.insert(test3);
 

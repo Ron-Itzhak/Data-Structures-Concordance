@@ -14,7 +14,7 @@ public class LinkedList {
         // Constructor 
         Node(char d){
         	
-        	tree= new BinarySearchTree();
+        	tree= new BinarySearchTree(d);
             data = d; 
             next = null; 
         } 

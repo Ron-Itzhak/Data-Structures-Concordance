@@ -2,6 +2,8 @@
 public class BinarySearchTree {
 	
 	private TreeNode root;
+	
+	//private char letter;
 
 	public TreeNode getRoot() {
 		return root;
@@ -9,6 +11,8 @@ public class BinarySearchTree {
 
 	public BinarySearchTree() {
 		this.root = null;
+		//this.letter = letter;
+
 	}
 
 	// Binary SearchTree Insert Methods Ron

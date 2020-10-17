@@ -12,7 +12,7 @@ public class Word {
 
 	@Override
 	public String toString() {
-		return  data +"("+ row + "," + place + ")";
+		return  data +"("+ row +")";
 	}
 
 }

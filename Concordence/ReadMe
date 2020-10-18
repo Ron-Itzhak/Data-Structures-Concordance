@@ -11,13 +11,14 @@ in that way it is less complex to search/insert/delete a node in a tree
 because each tree contains only the same words that begins in the same letter as the tree. 
 
 Complexity:
-n=number of words in text.
+k=number of words in text.
+n=height of the tree.
+
 the trees are binary search trees and they are not balanced
 first to search the correct tree between the 26 trees in list 
 in this way it is less complex then a single tree 
 and then make operations on each tree
 such as :
 n=number of words in text 
-
-insert all of the text: best case O(1), avereage case O(nlog(n)), worst case O(n^2) 
-search/deletion a single Word: best case O(1) avereage case O(log(n)) worst case O(n) 
+insert all of the text: best case O(1), avereage case O(klog(n)), worst case O(n^2) 
+search/deletion a single Word: best case O(1), avereage case O(log(n)), worst case O(n) 

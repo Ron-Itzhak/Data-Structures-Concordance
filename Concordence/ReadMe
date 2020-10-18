@@ -1,12 +1,16 @@
 Instructions
-1.Insert a well Written text without empty lines.
+1.Insert a well Written text without empty lines and without double or more connected signs.
 2.paste your wanted text in "Text.txt" in the project folder.
-3.
+3.the output is written to "Concordance.txt" file in the project folder.
+4.jre version is 14.1 
 
 complexity:
 n=number of words in text.
 the trees are binary search trees and they are not balanced
-first to search the right tree between the 26 trees in list and then make operations
+first to search the correct tree between the 26 trees in list 
+in this way it is less complex then a single tree 
+and then make operations on each tree
 such as :
 insert:o(n)
 search:o(n) worst case
+deletion:(n) worst case

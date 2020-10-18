@@ -12,7 +12,7 @@ public class TreeNode {
 		return data;
 	}
 	public void setData(Word word) {
-		this.data = data;
+		this.data = word;
 	}
 	@Override
 	public String toString() {

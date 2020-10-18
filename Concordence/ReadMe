@@ -6,9 +6,10 @@ Instructions
  
 Data structure:
 Word object - contains string-data and an integer-row
-array of 26 binary search trees, each tree has char indicates the letter of the Words inside the tree
+array of 26 binary search trees, each tree has char-letter and TreeNode-root indicates the first letter of the Words inside the tree
 in that way it is less complex to search/insert/delete a node in a tree
-because each tree contains only the same words that begins in the same letter as the tree. 
+because each tree contains only the same words that begins in the same letter as the tree
+and that is the main reason i chose that structure. 
 
 Complexity:
 k=number of words in text.

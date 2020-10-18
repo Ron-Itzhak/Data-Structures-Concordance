@@ -95,7 +95,7 @@ public class BinarySearchTree {
 		//tree.inOrderPrint(tree.root);
 		//System.out.println();
 		StringBuffer b=new StringBuffer();
-		b=(tree.inOrderString(tree.root,b));
+		//b=(tree.inOrderString(tree.root,b));
 		System.out.println(b);
 
 	}

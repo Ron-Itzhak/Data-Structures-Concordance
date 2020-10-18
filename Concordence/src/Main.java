@@ -46,6 +46,8 @@ public class Main {
 			PrintWriter printWriter = new PrintWriter("Concordance.txt");
 			writeToFile(printWriter, list);
 			printWriter.close();
+			System.out.println(" file Concordance.txt has been created");
+
 
 		} catch (FileNotFoundException e) {
 			System.out.println("An error occurred, file is not found");

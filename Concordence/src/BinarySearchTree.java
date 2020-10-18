@@ -4,6 +4,11 @@ public class BinarySearchTree {
 	private char letter;
 	private TreeNode root;
 
+	public BinarySearchTree(char letter) {
+		this.root = null;
+		this.letter = letter;
+	}
+
 	public char getLetter() {
 		return letter;
 	}
@@ -12,12 +17,7 @@ public class BinarySearchTree {
 		return root;
 	}
 
-	public BinarySearchTree(char letter) {
-		this.root = null;
-		this.letter = letter;
-	}
-
-	// Binary SearchTree Insert Methods 
+	// Binary SearchTree Insert Methods
 	public void insertNode(Word data) {
 		if (root == null)
 			root = new TreeNode(data);
@@ -53,11 +53,11 @@ public class BinarySearchTree {
 		writeInOrder(root.right, pw);
 	}
 
-	void insert(Word word) {
+	public void insert(Word word) {
 		root = insertRec(root, word);
 	}
 
-	TreeNode insertRec(TreeNode root, Word word) {
+	private TreeNode insertRec(TreeNode root, Word word) {
 		if (root == null) {
 			root = new TreeNode(word);
 			return root;

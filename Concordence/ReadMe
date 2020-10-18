@@ -2,15 +2,22 @@ Instructions
 1.Insert a well Written text without empty lines and without double or more connected signs.
 2.paste your wanted text in "Text.txt" in the project folder.
 3.the output is written to "Concordance.txt" file in the project folder.
-4.jre version is 14.1 
+4. jre version is 14.1 
+ 
+Data structure:
+Word object - contains string-data and an integer-row
+array of 26 binary search trees, each tree has char indicates the letter of the Words inside the tree
+in that way it is less complex to search/insert/delete a node in a tree
+because each tree contains only the same words that begins in the same letter as the tree. 
 
-complexity:
+Complexity:
 n=number of words in text.
 the trees are binary search trees and they are not balanced
 first to search the correct tree between the 26 trees in list 
 in this way it is less complex then a single tree 
 and then make operations on each tree
 such as :
-insert:o(n)
-search:o(n) worst case
-deletion:(n) worst case
+n=number of words in text 
+
+insert all of the text: best case O(1), avereage case O(nlog(n)), worst case O(n^2) 
+search/deletion a single Word: best case O(1) avereage case O(log(n)) worst case O(n) 

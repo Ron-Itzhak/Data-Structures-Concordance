@@ -72,7 +72,7 @@ public class Main {
 	//write to file
 	public static void writeToFile(PrintWriter pw,BinarySearchTree[] list ) {
 		for (int i = 0; i < 26; i++) {
-		list[i].printinOrderString(list[i].getRoot(),pw);
+		list[i].writeInOrder(list[i].getRoot(),pw);
 		}
 
 	}

@@ -17,7 +17,7 @@ public class BinarySearchTree {
 		this.letter = letter;
 	}
 
-	// Binary SearchTree Insert Methods Ron
+	// Binary SearchTree Insert Methods 
 	public void insertNode(Word data) {
 		if (root == null)
 			root = new TreeNode(data);
@@ -34,7 +34,7 @@ public class BinarySearchTree {
 
 	}
 
-// Binary SearchTree Inorder Method
+// Binary SearchTree Inorder print method
 	public void inOrderPrint(TreeNode root) {
 		if (root == null)
 			return;
@@ -43,29 +43,21 @@ public class BinarySearchTree {
 		inOrderPrint(root.right);
 
 	}
-	// Binary SearchTree Inorder Method write to file
+	// Binary SearchTree Inorder method write to file
 
-	public void printinOrderString(TreeNode root, PrintWriter pw) {
+	public void writeInOrder(TreeNode root, PrintWriter pw) {
 		if (root == null)
 			return;
-		printinOrderString(root.left,pw);
+		writeInOrder(root.left, pw);
 		pw.println(root.data.toString());
-		printinOrderString(root.right,pw);	
+		writeInOrder(root.right, pw);
 	}
-	
-	
-	
-	
-	
-	
 
-	// This method mainly calls insertRec()
 	void insert(Word word) {
 		root = insertRec(root, word);
 	}
 
 	TreeNode insertRec(TreeNode root, Word word) {
-
 		if (root == null) {
 			root = new TreeNode(word);
 			return root;
@@ -77,27 +69,6 @@ public class BinarySearchTree {
 			root.right = insertRec(root.right, word);
 
 		return root;
-	}
-
-	public static void main(String[] args) {
-		BinarySearchTree tree = new BinarySearchTree('a');
-		Word test = new Word("b", 0);
-		Word test1 = new Word("a", 1);
-		tree.insert(test);
-		tree.insert(test1);
-		/// not entered+not printed yet
-		Word test2 = new Word("c", 2);
-		Word test3 = new Word("d", 3);
-		tree.insert(test2);
-		tree.insert(test3);
-
-		// System.out.println(tree.root);
-		//tree.inOrderPrint(tree.root);
-		//System.out.println();
-		StringBuffer b=new StringBuffer();
-		//b=(tree.inOrderString(tree.root,b));
-		System.out.println(b);
-
 	}
 
 }

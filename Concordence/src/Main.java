@@ -61,6 +61,19 @@ public class Main {
 		if (list[n].getLetter() == word.data.charAt(0))
 			list[n].insert(word);
 	}
+	
+	
+	
+	// Insertion to the list Improved
+
+	public static void improvedInsertWordToList(BinarySearchTree[] list, Word word) {
+		int n = word.data.charAt(0)-97;
+		list[n].insert(word);
+	}
+
+	
+	
+	
 
 	/// console print
 	public static void printAllWords(BinarySearchTree[] list) {

@@ -2,6 +2,16 @@
 
 
 # 📑 Final Project in Data Structures Course<br/>
+
+<div align="center">
+  <sub>Built with ❤︎ by
+  <a href="https://github.com/Ron-Itzhak">Ron Itzhak</a> 
+ 
+  </a>
+</div>
+<br/>
+<br/>
+
 Concordance is an alphabetical index of the principal words in a book, we asked to Create a Data Structure that can can be able to 
 make a corcordance in efficent way by Time complexity and place.
 I managed to make it with implementation of simple Structures such as Binary search tree, lists and get it in avearage time complexity
